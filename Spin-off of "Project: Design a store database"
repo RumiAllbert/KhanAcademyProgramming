@@ -1,0 +1,21 @@
+CREATE TABLE my_store (id INTEGER PRIMARY KEY, item TEXT, size TEXT, price INTEGER, color TEXT, material TEXT);
+
+INSERT INTO my_store VALUES (1, "Shorts", "Medium", 15, "Brown", "silk" );
+INSERT INTO my_store VALUES (2, "pants", "large", 22, "Brown", "cotton" );
+INSERT INTO my_store VALUES (3, "Shorts", "large", 65, "pink", "cotton" );
+INSERT INTO my_store VALUES (4 , "yoga pants", "small", 5, "red", "polyester" );
+INSERT INTO my_store VALUES (5, "jeans", "Medium", 25, "blue", "cotton" );
+INSERT INTO my_store VALUES (6, "Shirt", "small", 14, "black", "silk" );
+INSERT INTO my_store VALUES (7, "Shorts", "Medium", 15, "Brown", "silk" );
+INSERT INTO my_store VALUES (8, "Hat", "XXtra large", 45, "Gray", "Cheap material" );
+INSERT INTO my_store VALUES (9, "Dress", "Large", 45, "White", "cotton" );
+INSERT INTO my_store VALUES (10, "Shorts", "Medium", 65, "Brown", "silk" );
+INSERT INTO my_store VALUES (11, "Jacket", "Medium", 35, "Brown", "Leather" );
+INSERT INTO my_store VALUES (12, "Short shorts", "small", 8, "dark blue", "Jean" );
+INSERT INTO my_store VALUES (13, "Shorts", "Medium", 55, "Brown", "silk" );
+INSERT INTO my_store VALUES (14, "Shorts", "Medium", 35, "Brown", "Polyester" );
+INSERT INTO my_store VALUES (15, "Shorts", "Medium", 85, "Pink", "silk" );
+
+SELECT item, SUM(price) FROM my_store GROUP BY material;
+
+SELECT * FROM my_store;

@@ -1,0 +1,37 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE People (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER,
+    NumberOfMovies INTEGER
+);
+
+INSERT INTO People (fullname, age, NumberOfMovies) VALUES ("Hanna", 34, 1);
+INSERT INTO People (fullname, age, NumberOfMovies) VALUES ("Dolly", 23, 7);
+INSERT INTO People (fullname, age, NumberOfMovies) VALUES ("Jessica", 19, 1);
+INSERT INTO People (fullname, age, NumberOfMovies) VALUES ("Paol", 45, 4);
+INSERT INTO People (fullname, age, NumberOfMovies) VALUES ("Anna", 55, 8);
+INSERT INTO People (fullname, age, NumberOfMovies) VALUES ("Rachel", 25, 3);
+
+
+CREATE TABLE Hobbies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    People_id INTEGER,
+    Hobby_name TEXT,
+    are_married TEXT
+);
+
+INSERT INTO Hobbies (Hobby_name, are_married) VALUES ("Drawing", "No");
+INSERT INTO Hobbies (Hobby_name, are_married) VALUES ("Dancing", "No");
+INSERT INTO Hobbies (Hobby_name, are_married) VALUES ("Piano", "Yes");
+INSERT INTO Hobbies (Hobby_name, are_married) VALUES ("Programming", "Yes");
+INSERT INTO Hobbies (Hobby_name, are_married) VALUES ("Golf", "No");
+
+select people.fullname, hobbies.Hobby_name
+FROM People
+JOIN Hobbies
+on people.id = hobbies.people_id;
+SELECT * FROM Hobbies;
+SELECT * FROM Hobbies;
+SELECT * FROM Hobbies;
