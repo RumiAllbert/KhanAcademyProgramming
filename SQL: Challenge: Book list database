@@ -1,0 +1,7 @@
+
+CREATE TABLE books (id INTEGER , name TEXT, rating INTEGER );
+
+INSERT INTO books VALUES (1, "sick boook", 5);
+INSERT INTO books VALUES (2, "Anothe book Butter", 6);
+INSERT INTO books VALUES (3, "Dark book bars", 2);
+SELECT * FROM books;
