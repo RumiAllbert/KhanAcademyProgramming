@@ -1,0 +1,14 @@
+var generator = new Random(1);
+var nextGaussian;
+var standardDeviation = 10;
+var mean = 200;
+
+    
+var draw = function() {
+     
+     var num = generator.nextGaussian(mean,standardDeviation);
+     var x = standardDeviation * num + mean;
+     noStroke();
+     fill(random(0, 255),random(0, 255),random(0, 255), random(100, 244));
+     ellipse(random(400),random(400), 16, 16);
+};
