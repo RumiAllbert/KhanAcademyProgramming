@@ -1,0 +1,25 @@
+/* What does the app's SQL look like? */
+
+CREATE TABLE app (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    type TEXT,
+    cost INTEGER,
+    category TEXT
+    );
+
+    INSERT INTO app (type, cost, category)
+    VALUES ("Phone app", 0, "Productivity");
+    INSERT INTO app (type, cost, category)
+    VALUES ("Phone app", 10, "Game");
+    INSERT INTO app (type, cost, category)
+    VALUES ("Phone app", 4, "Entertainment");
+    
+    SELECT * FROM app;
+
+UPDATE app SET cost = 5 WHERE id = 1;
+
+SELECT * FROM app;
+
+DELETE FROM app WHERE id = 3 AND category = "Entertainment";
+
+SELECT * FROM app;
